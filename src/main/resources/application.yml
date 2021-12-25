@@ -1,0 +1,67 @@
+spring:
+  profiles:
+    active: heather
+
+---
+
+spring:
+  profiles:
+    group:
+      "hoyoon": "hoyoondb, common"
+      "heather": "heatherdb,common"
+      "dev": "devdb,common"
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: "devdb"
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url:
+    username:
+    password:
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: "heatherdb"
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/petComes?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul
+    username: Heather
+    password: HeatherMySQL
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: "hoyoondb"
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/petcomes?useSSL=false&useUnicode=true&serverTimezone=Asia/Seoul
+    username:
+    password:
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: "common"
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: true
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+
+
