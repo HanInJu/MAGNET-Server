@@ -36,3 +36,6 @@ src/main/resources/application.yml
 
 ### VS Code ###
 .vscode/
+
+### Credentials ###
+!**/src/main/resources/*.yml
