@@ -7,15 +7,15 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.HashMap;
 import java.util.Map;
 
 @RequiredArgsConstructor
 @RestController
+@RequestMapping("auth")
 public class LoginController {
     private final NaverLoginService loginService;
 
-    @PostMapping("auth/{type}")
+    @PostMapping("{type}")
     public ResponseEntity<Map<String, Object>> login(@PathVariable("type") String type, @RequestParam Map<String, String> params){
         LoginUser user = new LoginUser();
         ResponseEntity<Map<String, Object>> responseEntity;
@@ -35,10 +35,15 @@ public class LoginController {
         return responseEntity;
     }
 
-    @RequestMapping("logout/{provider}/{userId}")
+    @DeleteMapping("{provider}/{userId}")
     public ResponseEntity logout(@PathVariable String provider, @PathVariable Long userId){
         String accessToken = loginService.renewalAccessToken(userId);
         loginService.logout(accessToken);
-        return new ResponseEntity(HttpStatus.OK);
+        return new ResponseEntity(HttpStatus.NO_CONTENT);
     }
+
+    /*@PostMapping("info/{userId}")
+    public ResponseEntity saveAdditionalInfo(@PathVariable Long userId){
+
+    }*/
 }
