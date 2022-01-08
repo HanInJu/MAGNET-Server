@@ -1,6 +1,6 @@
 package com.devko.magnet.util.config;
 
-import com.devko.magnet.repository.auth.UserRepository;
+import com.devko.magnet.repository.user.UserRepository;
 import com.devko.magnet.service.auth.NaverLoginService;
 import org.springframework.context.annotation.Configuration;
 
