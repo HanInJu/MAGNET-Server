@@ -1,7 +1,7 @@
-package com.devko.magnet.auth.controller;
+package com.devko.magnet.controller.auth;
 
-import com.devko.magnet.auth.dto.LoginUser;
-import com.devko.magnet.auth.service.NaverLoginService;
+import com.devko.magnet.dto.auth.LoginUser;
+import com.devko.magnet.service.auth.NaverLoginService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

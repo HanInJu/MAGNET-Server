@@ -1,6 +1,6 @@
-package com.devko.magnet.auth.domain;
+package com.devko.magnet.model.entity;
 
-import com.devko.magnet.auth.dto.LoginUser;
+import com.devko.magnet.dto.auth.LoginUser;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import org.springframework.data.annotation.CreatedDate;

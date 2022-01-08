@@ -1,6 +1,6 @@
-package com.devko.magnet.auth.repository;
+package com.devko.magnet.repository.auth;
 
-import com.devko.magnet.auth.domain.User;
+import com.devko.magnet.model.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

@@ -1,4 +1,4 @@
-package com.devko.magnet.auth.dto;
+package com.devko.magnet.dto.auth;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.AllArgsConstructor;

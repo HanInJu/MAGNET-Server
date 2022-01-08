@@ -1,14 +1,11 @@
-package com.devko.magnet.auth.service;
+package com.devko.magnet.service.auth;
 
-import com.devko.magnet.auth.domain.User;
-import com.devko.magnet.auth.dto.LoginUser;
-import com.devko.magnet.auth.repository.UserRepository;
+import com.devko.magnet.model.entity.User;
+import com.devko.magnet.dto.auth.LoginUser;
+import com.devko.magnet.repository.auth.UserRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Service;
-import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.util.MultiValueMap;
 
 import java.util.HashMap;

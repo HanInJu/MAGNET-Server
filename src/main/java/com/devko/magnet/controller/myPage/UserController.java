@@ -1,7 +1,7 @@
-package com.devko.magnet.auth.controller;
+package com.devko.magnet.controller.myPage;
 
-import com.devko.magnet.auth.domain.User;
-import com.devko.magnet.auth.service.UserService;
+import com.devko.magnet.model.entity.User;
+import com.devko.magnet.service.auth.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
