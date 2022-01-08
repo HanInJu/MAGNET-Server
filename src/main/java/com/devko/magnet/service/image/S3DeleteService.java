@@ -1,4 +1,4 @@
-package com.devko.magnet.util.s3;
+package com.devko.magnet.service.image;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

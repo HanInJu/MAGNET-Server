@@ -1,5 +1,7 @@
 HELP.md
 .gradle
+gradlew
+gradlew.bat
 build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
@@ -25,6 +27,7 @@ bin/
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+src/main/resources/application.yml
 
 ### NetBeans ###
 /nbproject/private/
@@ -37,4 +40,4 @@ out/
 .vscode/
 
 ### Credentials ###
-!**/src/main/resources/*.yml
+**/src/main/resources/*.yml
