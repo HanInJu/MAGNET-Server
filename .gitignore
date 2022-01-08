@@ -40,5 +40,4 @@ src/main/resources/application.yml
 .vscode/
 
 ### Credentials ###
-application.yml
-aws.yml
+**/src/main/resources/*.yml

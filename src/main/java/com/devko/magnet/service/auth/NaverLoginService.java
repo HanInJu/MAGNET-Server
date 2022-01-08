@@ -2,7 +2,7 @@ package com.devko.magnet.service.auth;
 
 import com.devko.magnet.model.entity.User;
 import com.devko.magnet.dto.auth.LoginUser;
-import com.devko.magnet.repository.auth.UserRepository;
+import com.devko.magnet.repository.user.UserRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.util.LinkedMultiValueMap;
 import org.springframework.web.reactive.function.BodyInserters;

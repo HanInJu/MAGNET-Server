@@ -1,4 +1,4 @@
-package com.devko.magnet.repository.auth;
+package com.devko.magnet.repository.user;
 
 import com.devko.magnet.model.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;

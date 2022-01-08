@@ -1,7 +1,7 @@
-package com.devko.magnet.service.auth;
+package com.devko.magnet.service.user;
 
 import com.devko.magnet.model.entity.User;
-import com.devko.magnet.repository.auth.UserRepository;
+import com.devko.magnet.repository.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
