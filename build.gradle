@@ -2,6 +2,7 @@ plugins {
     id 'org.springframework.boot' version '2.6.1'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
+    id "org.asciidoctor.convert" version "1.5.9.2"
 }
 
 group = 'com.devko'
@@ -14,6 +15,17 @@ configurations {
     }
 }
 
+asciidoctor {
+    dependsOn test
+}
+
+bootJar {
+    dependsOn asciidoctor
+    from ("/html5") {
+        into 'static/docs'
+    }
+}
+
 repositories {
     mavenCentral()
 }
@@ -22,12 +34,13 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
     implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-webflux'
+    implementation 'org.springframework.cloud:spring-cloud-starter-aws:2.2.4.RELEASE'
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     runtimeOnly 'mysql:mysql-connector-java'
     annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-    testImplementation 'org.springframework.security:spring-security-test'
+    testImplementation 'org.springframework.restdocs:spring-restdocs-mockmvc'
 }
 
 test {

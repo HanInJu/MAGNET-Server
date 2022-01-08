@@ -19,6 +19,7 @@ import java.util.Date;
 @EntityListeners(AuditingEntityListener.class)
 @Table(name = "user")
 public class User {
+    @JsonIgnore
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -73,12 +74,15 @@ public class User {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
+    @JsonIgnore
     @Column(name = "sns_type")
     private String snsType;
 
+    @JsonIgnore
     @Column(name = "sns_id")
     private String snsId;
 
+    @JsonIgnore
     @Column(name = "sns_refresh_token")
     private String snsRefreshToken;
 
