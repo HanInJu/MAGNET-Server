@@ -3,6 +3,7 @@ package com.devko.magnet.controller;
 import com.devko.magnet.dto.project.ProjectImageDto;
 import com.devko.magnet.service.image.S3UploadService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,7 +25,7 @@ public class HomeController {
     }
 
     @GetMapping
-    public String executeTest() {
-        return "Hello-World";
+    public ResponseEntity executeTest() {
+        return new ResponseEntity("Hello, World?", HttpStatus.OK);
     }
 }
