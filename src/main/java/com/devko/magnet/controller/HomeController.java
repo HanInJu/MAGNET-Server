@@ -26,6 +26,6 @@ public class HomeController {
 
     @GetMapping
     public ResponseEntity executeTest() {
-        return new ResponseEntity("Hello, World! (ver.Jenkins 8)", HttpStatus.OK);
+        return new ResponseEntity("Hello, World! (ver.Jenkins 9)", HttpStatus.OK);
     }
 }
