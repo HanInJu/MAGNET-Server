@@ -21,11 +21,11 @@ public class HomeController {
 
     @PostMapping("image-test")
     public ResponseEntity home(ProjectImageDto projectImage) throws IOException {
-        return  s3UploadService.upload(projectImage.getFile(), "test");
+        return s3UploadService.upload(projectImage.getFile(), "test");
     }
 
     @GetMapping
     public ResponseEntity executeTest() {
-        return new ResponseEntity("Hello, World! (ver.Jenkins 10)", HttpStatus.OK);
+        return new ResponseEntity("Hello, World!", HttpStatus.OK);
     }
 }
